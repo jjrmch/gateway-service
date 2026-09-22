@@ -8,7 +8,7 @@ Además valida el JWT en cada petición: las rutas de negocio exigen un token v�
 
 - Enrutado de peticiones a catalog-service, transactions-service, customer-service y auth-service
 - Validación de JWT (HS256) con el `JWT_SECRET` compartido; sin token válido responde `401` en JSON
-- Rutas públicas: `/auth/login`, `/auth/register`, Swagger, health y `/error`
+- Rutas públicas: `/auth/login`, `/auth/register`, la lectura del catálogo (`GET /libros/**`), Swagger, health y `/error`
 - Balanceo de carga entre instancias vía Spring Cloud LoadBalancer
 - Agregación de Swagger: la UI muestra los docs de los cuatro servicios en `http://localhost:8080/swagger-ui.html`
 - Configuración CORS para permitir al frontend de desarrollo (React/Vite) consumir la API
