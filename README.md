@@ -81,11 +81,19 @@ La plataforma completa se compone de:
 - [biblioteca-frontend](https://github.com/jjrmch/biblioteca-frontend) — panel web en React
 - [biblioteca-deploy](https://github.com/jjrmch/biblioteca-deploy) — docker-compose con el stack completo
 
+## Tests
+
+```bash
+./mvnw verify
+```
+
+7 tests de integración de la cadena de seguridad (`@SpringBootTest` + MockMvc) contra un servicio de destino simulado: no necesitan Eureka ni PostgreSQL. Se ejecutan también en CI en cada push y pull request (badge arriba).
+
 ## Por mejorar
 
 - CORS abierto a cualquier origen; habría que restringirlo a los dominios del frontend.
 - No hay rate limiting ni renovación de token en el gateway.
-- Los microservicios todavía no validan el JWT por su cuenta (siguiente fase): ahora mismo confían en el gateway.
+- El gateway solo autentica: la autorización por rol (ADMIN, BIBLIOTECARIO, CLIENTE) la aplican los propios servicios.
 
 ## Licencia
 
