@@ -1,5 +1,7 @@
 # Gateway Service
 
+![CI](https://github.com/jjrmch/gateway-service/actions/workflows/ci.yml/badge.svg)
+
 API Gateway de la plataforma de gestión de biblioteca. Es el punto único de entrada: el frontend y cualquier cliente hablan solo con este servicio y él reenvía las peticiones al microservicio correspondiente, resolviendo las instancias por nombre a través de Eureka con balanceo de carga (`lb://`).
 
 Además valida el JWT en cada petición: las rutas de negocio exigen un token válido y solo el login y el registro son públicos.
