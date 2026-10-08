@@ -5,6 +5,16 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.1.0] - 2026-10-08
+
+### Añadido
+
+- 5 tests de integración del enrutado: ventas, alquileres, reservas, multas y clientes, el `StripPrefix` de los docs y el preflight CORS
+
+### Cambiado
+
+- README actualizado con el total de tests (12)
+
 ## [1.0.0] - 2026-10-05
 
 ### Añadido
