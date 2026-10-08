@@ -88,7 +88,7 @@ La plataforma completa se compone de:
 ./mvnw verify
 ```
 
-7 tests de integración de la cadena de seguridad (`@SpringBootTest` + MockMvc) contra un servicio de destino simulado: no necesitan Eureka ni PostgreSQL. Se ejecutan también en CI en cada push y pull request (badge arriba).
+12 tests de integración: la cadena de seguridad y el enrutado de todas las rutas (incluidos StripPrefix y CORS) (`@SpringBootTest` + MockMvc) contra un servicio de destino simulado: no necesitan Eureka ni PostgreSQL. Se ejecutan también en CI en cada push y pull request (badge arriba).
 
 ## Por mejorar
 
